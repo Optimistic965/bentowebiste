@@ -1,0 +1,243 @@
+:root{
+    --purple_100: hsl(254, 88%, 90%);
+    --purple_500: hsl(256, 67%, 59%);
+    --yellow_100: hsl(31, 66%, 93%);
+    --yellow_500: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+    --lgry: hsl(60, 23%, 94%);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--lgry);
+    overflow: hidden;
+}
+
+main{
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding-block: 3em;
+    display: flex;
+    gap: 2em;
+}
+
+div{
+    border-radius: 1em;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+article{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+article .top, article .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+article .top{
+    background-color: var(--yellow_100);
+}
+
+article .bottom{
+    background-color: var(--yellow_500);
+}
+
+article .top .content, article .bottom .content{
+    width: 80%;
+    font-size: 40px;
+    letter-spacing: -3px;
+}
+
+article span{
+    font-style: italic;
+    color: var(--purple_500);
+}
+
+article .top .content .img_cont{
+    width: 200px;
+    height: 100px;
+}
+
+article .bottom .content .img_cont{
+    width: 300px;
+    height: 300px;
+}
+
+section{
+    width: 75%;
+}
+
+.grid-sect{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2em;
+    
+    .ele-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: var(--purple_500);
+        padding: 2.5em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 5em;
+            text-align: center;
+            font-weight: 500;
+            line-height: .9em;
+            margin-bottom: .3em;
+
+            span {
+                color: var(--yellow_500);
+            }
+        }
+
+        .img_cont{
+            width: 400px;
+            height: 30px;
+        }
+
+        p{
+            font-size: 1.4em;
+        }
+        
+    }
+    
+    .ele-2{
+        grid-column-start: 3;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: var(--purple_100);
+        padding: 2em 1.5em;
+        overflow: hidden;
+        
+        p{
+            font-size: 1.2em;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .firstChild{
+            font-size: 2em;
+            font-weight: 600;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        div.img_cont{
+            width: 400px;
+            height: 400px;
+            position: relative;
+            right: -3.5em;
+        }
+
+    }
+    
+    .ele-3{
+        background-color: var(--white);
+        padding: 2em;
+        padding-right: 0;
+        overflow: hidden;
+    
+        div.img_cont{
+            width: 24em;
+            position: relative;
+            top: -1em;
+        }
+    
+        p{
+            width: 80%;
+            font-size: 2em;
+            font-weight: 600;
+        }
+    }
+    
+    .ele-4{
+        background-color: var(--yellow_500);
+        padding: 2em;
+        overflow: hidden;
+    
+        div.img_cont{
+            width: 18em;
+            position: relative;
+            left: -1em;
+        }
+    
+        p{
+            width: 80%;
+            font-size: 2em;
+            font-weight: 600;
+        }
+    }
+    
+    .ele-5{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding-inline: 2em;
+        background: var(--white);
+
+        p{
+            span{
+                display: block;
+                font-size: 5em;
+            }
+
+            font-size: 1.2em;
+        }
+
+        div.img_cont{
+            margin-top: 1em;
+        }
+    }
+    
+    .ele-6{
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        overflow: hidden;
+        background-color: var(--purple_500);
+
+        display: flex;
+        align-items: center;
+        padding: 1em;
+
+        div.img_cont{
+            width: 50%;
+        }
+
+        p{
+            width: 50%;
+            padding-left: .3em;
+            font-size: 3em;
+            font-weight: 500;
+            color: var(--white);
+        }
+    }
+}
